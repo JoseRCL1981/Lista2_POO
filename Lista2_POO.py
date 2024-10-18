@@ -210,6 +210,21 @@ elif media >= 5 and media < 7:
 else:
     print('Aluno está Reprovado')
 
+# Exercício 16
+# Calcular o IMC:
+# Peça ao usuário o peso e a altura, calcule o IMC informe se ele está "Abaixo do peso" (IMC < 18,5),
+# "Peso normal" (18,5 >= IMC < 25), "A cima do peso" (IMC >= 25).
+
+peso = float(input('Digite seu peso: '))
+altura = float(input('Digite sua altura: '))
+IMC = peso / altura **2
+print(f'O IMC é {IMC:.2f}')
+if IMC < 18.5:
+    print('Abaixo do peso')
+elif IMC >= 18.5 and IMC < 25:
+    print('Peso normal')
+else:
+    print('Acima do peso')
 
 # Exercício 17
 # Identificar o triângulo:
