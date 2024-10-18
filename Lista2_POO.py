@@ -235,16 +235,21 @@ lado1 = float(input('Digite o comprimento do primeiro lado: '))
 lado2 = float(input('Digite o comprimento do segundo lado: '))
 lado3 = float(input('Digite o comprimento do terceiro lado: '))
 
-if lado1 + lado2 > lado3 and lado1 + lado3 > lado2 and lado2 + lado3 > lado1:
-    if lado1 == lado2 == lado3:
-        tipo_triangulo = 'Equilátero'  # Todos os lados iguais
-    elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
-        tipo_triangulo = 'Isósceles'  # Dois lados iguais
-    else:
-        tipo_triangulo = 'Escaleno'  # Todos os lados diferentes
 
+if lado1 > (lado2 + lado3) or lado2 > (lado1 + lado3) or lado3 > (lado1 + lado2):
+    print('Os lados informados não podem formar um triângulo.')
+    
+elif lado1 == lado2 == lado3:
+    tipo_triangulo = 'Equilátero'  # Todos os lados iguais
     print(f'Os lados formam um triângulo {tipo_triangulo}.')
 
+elif lado1 == lado2 or lado1 == lado3 or lado2 == lado3:
+    tipo_triangulo = 'Isósceles'  # Dois lados iguais
+    print(f'Os lados formam um triângulo {tipo_triangulo}.')
+else:
+    tipo_triangulo = 'Escaleno'  # Todos os lados diferentes
+    print(f'Os lados formam um triângulo {tipo_triangulo}.')
+    
 
 # Exercício 18
 # Login e senha:
